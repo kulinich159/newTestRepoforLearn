@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="borukProj" />
+        <module name="cucumberProj" />
+        <module name="gorbanProj" />
+        <module name="jBehaveProject" />
+        <module name="kimProj" />
+        <module name="liashenkoSProj" />
+        <module name="overAll" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="borukProj" target="1.7" />
+      <module name="cucumberProj" target="1.7" />
+      <module name="G38Proj" target="1.7" />
+      <module name="gorbanProj" target="1.8" />
+      <module name="jBehaveProject" target="1.5" />
+      <module name="kimProj" target="1.8" />
+      <module name="liashenkoSProj" target="1.7" />
+      <module name="overAll" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/G38Proj.iml" filepath="$PROJECT_DIR$/G38Proj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/borukProj/borukProj.iml" filepath="$PROJECT_DIR$/borukProj/borukProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cucumberProj/cucumberProj.iml" filepath="$PROJECT_DIR$/cucumberProj/cucumberProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gorbanProj/gorbanProj.iml" filepath="$PROJECT_DIR$/gorbanProj/gorbanProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jBehaveProject/jBehaveProject.iml" filepath="$PROJECT_DIR$/jBehaveProject/jBehaveProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kimProj/kimProj.iml" filepath="$PROJECT_DIR$/kimProj/kimProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liashenkoSProj/liashenkoSProj.iml" filepath="$PROJECT_DIR$/liashenkoSProj/liashenkoSProj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/overAll/overAll.iml" filepath="$PROJECT_DIR$/overAll/overAll.iml" />
+    </modules>
+  </component>
+</project>
