@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="borukProj" />
         <module name="cucumberProj" />
-        <module name="gorbanProj" />
         <module name="jBehaveProject" />
         <module name="kimProj" />
+        <module name="kullProj" />
         <module name="liashenkoSProj" />
         <module name="overAll" />
       </profile>
@@ -19,9 +19,9 @@
       <module name="borukProj" target="1.7" />
       <module name="cucumberProj" target="1.7" />
       <module name="G38Proj" target="1.7" />
-      <module name="gorbanProj" target="1.8" />
       <module name="jBehaveProject" target="1.5" />
       <module name="kimProj" target="1.8" />
+      <module name="kullProj" target="1.8" />
       <module name="liashenkoSProj" target="1.7" />
       <module name="overAll" target="1.8" />
     </bytecodeTargetLevel>

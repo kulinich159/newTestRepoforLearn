@@ -52,7 +52,7 @@ public class Login {
         webDriver.findElement(By.tagName("button")).click();
 
 
-        Assert.assertTrue("Not Authorization",
+        Assert.assertTrue ("Not Authorization",
                 webDriver.findElement(By.xpath(".//input[@name='_username']")).isDisplayed());
 
         webDriver.quit();
