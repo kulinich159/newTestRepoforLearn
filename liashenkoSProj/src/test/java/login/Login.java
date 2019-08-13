@@ -26,7 +26,7 @@ public class Login {
         webDriver.findElement(By.name("_username")).sendKeys("Student");
         webDriver.findElement(By.id("password")).sendKeys("909090");
         webDriver.findElement(By.tagName("button")).click();
-
+//hjkkhkhjk
         Assert.assertTrue("Avatar is not present",
                 webDriver.findElement(By.xpath(".//*[@class='pull-left image']")).isDisplayed());
 
