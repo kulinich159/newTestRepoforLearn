@@ -16,6 +16,18 @@ public class Login {
     public void validLogin() {
 
 
+        // .//*[@id='serchO']
+        //  .//th[@name='headTeable']
+        //  .//UL//LI[2]
+        //  .//select//option[value='mercedes']
+        //  .//*[@href='google.com']
+        //  .//input[@type='rafio' and @name='group1']
+        //  .//input[@type='checkbox' and @value='a1']
+        //  .//textarea[@name='textArea']
+        //  .//*/b[text()='Just text'] - поиск по тектсу
+        //  .//*/b[contains(text(),'Just')]
+        //  .//*[contains(text(),'Sergei')]//..//td[2]
+
         File file = new File("./src/drivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
@@ -23,6 +35,8 @@ public class Login {
 
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+
 
         webDriver.get("http://v3.test.itpmgroup.com");
         System.out.println("Site was opened");
