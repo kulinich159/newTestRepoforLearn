@@ -15,7 +15,7 @@ public class Login {
 
     public void validLogin() {
 
-        //sdfsdfsdffghfgh
+        //sdfsdfsdffghfgh fghfgh fgh
         File file = new File("./src/drivers/chromedriver.exe");
         System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 
@@ -23,6 +23,8 @@ public class Login {
 
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+
 
         webDriver.get("http://v3.test.itpmgroup.com");
         System.out.println("Site was opened");
