@@ -9,8 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends ParentPage {
 
-    public LoginPage(WebDriver webDriver) {
-        super(webDriver);
+    public LoginPage(WebDriver webDriver) {super(webDriver);
     }
 
     @FindBy(name = "_username")// id/path
