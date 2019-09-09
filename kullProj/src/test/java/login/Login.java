@@ -20,7 +20,7 @@ public class Login {
         //  .//th[@name='headTeable']
         //  .//UL//LI[2]
         //  .//select//option[value='mercedes']
-        //  .//*[@href='google.com']
+        //  .//*[@href='google.com']  //*[@id="side-menu"]/div/div[1]/img  assets/img/logo2.png
         //  .//input[@type='rafio' and @name='group1']
         //  .//input[@type='checkbox' and @value='a1']
         //  .//textarea[@name='textArea']
