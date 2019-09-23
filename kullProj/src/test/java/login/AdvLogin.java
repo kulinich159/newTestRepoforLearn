@@ -25,8 +25,8 @@ public class AdvLogin {
 
         webDriver.get("https://172.20.136.120/#/login");
 
-        webDriver.findElement(By.id("email")).sendKeys("o.kulinich@codiv.io");
-        webDriver.findElement(By.id("password")).sendKeys("D_orian1234");
+        webDriver.findElement(By.id("email")).sendKeys("kulinich159+33@gmail.com");
+        webDriver.findElement(By.id("password")).sendKeys("WqD:ITX@OuxJ");
         webDriver.findElement(By.id("loginButton")).click();
 
         Assert.assertTrue("Logo is not present",webDriver.findElement(By.xpath(".//*[@src='assets/img/logo2.png']")).isDisplayed());
