@@ -3,12 +3,24 @@ package pages1;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage1 extends ParentPages1 {
 
     public LoginPage1(WebDriver webDriver) {
         super(webDriver);
     }
+
+    @FindBy(id = "email")
+    private WebElement inputLogin;
+
+    @FindBy(id = "password")
+    private WebElement inputPass;
+
+    @FindBy(id = "loginButton")
+    private WebElement loginButtom;
+
 
 
     public void openPage() {
@@ -31,8 +43,8 @@ public class LoginPage1 extends ParentPages1 {
 
         try {
 
-            webDriver.findElement(By.id("email")).clear();
-            webDriver.findElement(By.id("email")).sendKeys(login);
+            inputLogin.clear();
+            inputLogin.sendKeys(login);
             System.out.println(login + " was sated ");
 
         } catch (Exception e) {
@@ -47,8 +59,8 @@ public class LoginPage1 extends ParentPages1 {
 
         try {
 
-            webDriver.findElement(By.id("password")).clear();
-            webDriver.findElement(By.id("password")).sendKeys(pass);
+            inputPass.clear();
+            inputPass.sendKeys(pass);
             System.out.println(pass + " was sated ");
 
         } catch (Exception e) {
@@ -63,7 +75,7 @@ public class LoginPage1 extends ParentPages1 {
 
         try {
 
-            webDriver.findElement(By.id("loginButton")).click();
+            loginButtom.click();
             System.out.println("Submit Button was clicked");
 
         } catch (Exception e) {
