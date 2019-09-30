@@ -16,4 +16,9 @@ public class LoginWithPageObject extends ParentTest1 {
         checkExpectedResult("Left side bar was not found", homePage1.isLeftSideBarIsPresent());
     }
 
+    @Test
+    public void loginWithInvalidCredentials(){
+        loginPage1.loginWithInvalidCred("asdasdasd","sssasdasd");
+        checkExpectedResult("Left side bar menu should not be present", !homePage1.isLeftSideBarIsPresent());
+    }
 }
