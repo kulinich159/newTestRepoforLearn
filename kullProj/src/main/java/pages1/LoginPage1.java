@@ -21,8 +21,6 @@ public class LoginPage1 extends ParentPages1 {
     @FindBy(id = "loginButton")
     private WebElement loginButtom;
 
-
-
     public void openPage() {
 
         try {
@@ -41,48 +39,55 @@ public class LoginPage1 extends ParentPages1 {
 
     public void enterTextInToInputLogin(String login) {
 
-        try {
+//        try {
+////
+////            inputLogin.clear();
+////            inputLogin.sendKeys(login);
+////            System.out.println(login + " was sated ");
+////
+////        } catch (Exception e) {
+////
+////            System.out.println("Can't work with element " + e);
+////            Assert.fail("Can't work with element " + e);
+////        }
 
-            inputLogin.clear();
-            inputLogin.sendKeys(login);
-            System.out.println(login + " was sated ");
+        actionsWithElements.enterInToElement(inputLogin,login);
 
-        } catch (Exception e) {
-
-            System.out.println("Can't work with element " + e);
-            Assert.fail("Can't work with element " + e);
-        }
 
     }
 
     public void enterTextInToInputPass(String pass) {
 
-        try {
+//        try {
+//
+//            inputPass.clear();
+//            inputPass.sendKeys(pass);
+//            System.out.println(pass + " was sated ");
+//
+//        } catch (Exception e) {
+//
+//            System.out.println("Can't work with element " + e);
+//            Assert.fail("Can't work with element " + e);
+//        }
 
-            inputPass.clear();
-            inputPass.sendKeys(pass);
-            System.out.println(pass + " was sated ");
-
-        } catch (Exception e) {
-
-            System.out.println("Can't work with element " + e);
-            Assert.fail("Can't work with element " + e);
-        }
+        actionsWithElements.enterInToElement(inputPass,pass);
 
     }
 
     public void clickOnSubmitButton(){
 
-        try {
+//        try {
+//
+//            loginButtom.click();
+//            System.out.println("Submit Button was clicked");
+//
+//        } catch (Exception e) {
+//
+//            System.out.println("Can't work with element " + e);
+//            Assert.fail("Can't work with element " + e);
+//        }
 
-            loginButtom.click();
-            System.out.println("Submit Button was clicked");
-
-        } catch (Exception e) {
-
-            System.out.println("Can't work with element " + e);
-            Assert.fail("Can't work with element " + e);
-        }
+        actionsWithElements.clickOnElement(loginButtom);
 
     }
 
