@@ -16,13 +16,16 @@ public class HomePage1 extends ParentPages1{
 
     public boolean isLeftSideBarIsPresent() {
 
-        try {
-          return  webDriver.findElement(By.id("side-menu")).isDisplayed();
+//        try {
+//          return  leftSideBarMenu.isDisplayed();
+//
+//        } catch (Exception e) {
+//          return false;
+//        }
 
-        }catch (Exception e) {
-          return false;
-        }
-
+        return  actionsWithElements.isElementPresent(leftSideBarMenu);
 
     }
+
+
 }

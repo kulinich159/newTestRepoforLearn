@@ -26,11 +26,11 @@ public class LoginPage1 extends ParentPages1 {
         try {
 
             webDriver.get("https://stage-board.advendor.net/");
-            System.out.println("Login page was opened");
+            logger.info("Login page was opened");
 
         }catch (Exception e) {
 
-            System.out.println("Can't open Login Page " + e);
+            logger.error("Can't open Login Page " + e);
             Assert.fail("Can't open Login Page " + e);
 
         }
@@ -91,4 +91,12 @@ public class LoginPage1 extends ParentPages1 {
 
     }
 
+    public void loginWithInvalidCred(String login, String passWord) {
+
+        openPage();
+        enterTextInToInputPass(passWord);
+        enterTextInToInputLogin(login);
+        clickOnSubmitButton();
+
+    }
 }
