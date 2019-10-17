@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages1.CreateOfferPage;
 import pages1.HomePage1;
 import pages1.LoginPage1;
 
@@ -16,6 +17,7 @@ public class ParentTest1 {
     WebDriver webDriver;
     protected LoginPage1 loginPage1;
     protected HomePage1 homePage1;
+    protected CreateOfferPage createOfferPage;
 
     @Before
     public void setUp(){
@@ -29,7 +31,7 @@ public class ParentTest1 {
 
         loginPage1 = new LoginPage1(webDriver);
         homePage1 = new HomePage1(webDriver);
-
+        createOfferPage = new CreateOfferPage(webDriver);
     }
 
     @After

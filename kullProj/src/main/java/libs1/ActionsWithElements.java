@@ -31,8 +31,8 @@ public class ActionsWithElements {
 
     public void preintErrorAndStopTest(Exception e) {
 
-        logger.error("Can't work with element" + e );
-        Assert.fail("Can't work with element" + e);
+        logger.error("Can't work with element " + e );
+        Assert.fail("Can't work with element " + e);
     }
 
     public void clickOnElement(WebElement element) {
