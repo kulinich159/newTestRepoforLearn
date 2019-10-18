@@ -1,5 +1,6 @@
 package pages1;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,15 @@ public class HomePage1 extends ParentPages1{
 
     @FindBy(xpath = ".//*[@id='title']")
     private WebElement inputTitle;
+
+    @FindBy(xpath = ".//*[@class='fa fa-trash']")
+    private WebElement deleteOfferButton;
+
+    @FindBy(xpath = ".//*[@title='NEw Offer Title']")
+    private WebElement testOfferTitle;
+
+    @FindBy(xpath = ".//*[@class='swal2-confirm swal2-styled']")
+    private WebElement confirmDeletingButton;
 
     public boolean isLeftSideBarIsPresent() {
 
@@ -46,6 +56,56 @@ public class HomePage1 extends ParentPages1{
     public void clickOnCreateOfferButton (){
 
         actionsWithElements.clickOnElement(createOfferButton);
+    }
+
+
+    public void deleteTestOfferIfThisOfferPresent() {
+
+
+        if (isOfferPresent()){
+            clickOnDeleteButton(deleteOfferButton);
+            ClickOnDeleteConfimingButton(confirmDeletingButton);
+
+        } else {
+            logger.info("Now in list no one offer with test name" );
+        }
+
+    }
+
+    private void ClickOnDeleteConfimingButton(WebElement element) {
+        try {
+
+            element.click();
+            logger.info("Element was clicked");
+
+        }catch(Exception e){
+
+            actionsWithElements.preintErrorAndStopTest(e);
+        }
+
+    }
+
+    private void clickOnDeleteButton(WebElement element) {
+
+        try {
+
+            element.click();
+            logger.info("Element was clicked");
+
+        }catch(Exception e){
+
+            actionsWithElements.preintErrorAndStopTest(e);
+        }
+
+
+    }
+
+    private boolean isOfferPresent() {
+        try {
+            return actionsWithElements.isElementPresent(testOfferTitle);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 

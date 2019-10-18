@@ -16,6 +16,11 @@ public class Login {
     public void validLogin() {
 
 
+
+//        1. Явное ожидание
+//        2. implicitlyWait(5, TimeUnit.SECONDS);
+//        3. Thread.sleep(1000);
+
         // .//*[@id='serchO']
         //  .//th[@name='headTeable']
         //  .//UL//LI[2]
