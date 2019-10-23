@@ -7,7 +7,7 @@ import parentTest1.ParentTest1;
 public class CreateOffer extends ParentTest1 {
 
     @Test
-    public void createNewOfferWithValidData(){
+    public void createNewOfferWithValidData() {
 
         homePage1.goToOfferListPage();
         homePage1.deleteTestOfferIfThisOfferPresent();
@@ -22,7 +22,7 @@ public class CreateOffer extends ParentTest1 {
     }
 
     @After
-    public  void  deleteTestOffer(){
+    public void deleteTestOffer() {
         homePage1.deleteTestOfferIfThisOfferPresent();
     }
 }

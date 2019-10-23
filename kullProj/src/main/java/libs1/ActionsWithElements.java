@@ -18,24 +18,24 @@ public class ActionsWithElements {
 
         this.webDriver = webDriver;
         wait10 = new WebDriverWait(webDriver, 10);
-        wait15 = new WebDriverWait(webDriver , 15);
+        wait15 = new WebDriverWait(webDriver, 15);
     }
 
-    public void enterInToElement(WebElement element,String text) {
+    public void enterInToElement(WebElement element, String text) {
 
         try {
             element.clear();
             element.sendKeys(text);
             logger.info(text + " was input into element ");
 
-        }catch (Exception e){
+        } catch (Exception e) {
             preintErrorAndStopTest(e);
         }
     }
 
     public void preintErrorAndStopTest(Exception e) {
 
-        logger.error("Can't work with element " + e );
+        logger.error("Can't work with element " + e);
         Assert.fail("Can't work with element " + e);
     }
 
@@ -47,26 +47,27 @@ public class ActionsWithElements {
             element.click();
             logger.info("Element was clicked");
 
-        }catch(Exception e){
+        } catch (Exception e) {
 
             preintErrorAndStopTest(e);
         }
     }
 
-    public boolean isElementPresent(WebElement webElement){
-        try{
+    public boolean isElementPresent(WebElement webElement) {
+
+        try {
             boolean isDisplayed = webElement.isDisplayed();
             logger.info("Element is displayed -> " + isDisplayed);
             return isDisplayed;
 
-        }catch (Exception e) {
+        } catch (Exception e) {
             logger.info("Element id displayed -> false");
-            return  false;
+            return false;
         }
 
     }
 
-    public void selectValueInDropDown(WebElement element, String value){ //выбор значения не совсем как в UI но для скорости обработки используем его
+    public void selectValueInDropDown(WebElement element, String value) { //выбор значения не совсем как в UI но для скорости обработки используем его
 
         try {
             Select select = new Select(element);

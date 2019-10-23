@@ -1,12 +1,19 @@
 package login_1;
 
+import libs.ExcelDriver;
 import org.junit.Test;
 import parentTest1.ParentTest1;
 
-public class LoginWithPageObject extends ParentTest1 {
+import java.io.IOException;
+import java.util.Map;
+
+public class LoginWithDataExel extends ParentTest1 {
 
     @Test
-    public void validLogin() {
+    public void validLogin() throws IOException {
+
+        ExcelDriver excelDriver = new ExcelDriver();
+        Map dataForValidLogin = excelDriver.getData(configProperties.DATA_FILE(),"validLogOn");
 
         loginPage1.openPage();
         loginPage1.enterTextInToInputLogin("tpanfilova@codiv.io");
@@ -15,13 +22,4 @@ public class LoginWithPageObject extends ParentTest1 {
 
         checkExpectedResult("Left side bar was not found", homePage1.isLeftSideBarIsPresent());
     }
-
-    @Test
-    public void loginWithInvalidCredentials() {
-        loginPage1.loginWithInvalidCred("asdasdasd", "sssasdasd");
-        checkExpectedResult("Left side bar menu should not be present", !homePage1.isLeftSideBarIsPresent());
-
-    }
-
-
 }
