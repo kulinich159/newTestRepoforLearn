@@ -1,5 +1,7 @@
 package login_1;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -8,23 +10,13 @@ import org.junit.Assert;
 import org.junit.Test;
 import parentTest1.ParentEndpointTest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestAssured extends ParentEndpointTest {
 
 
     Logger logger = Logger.getLogger(getClass());
-    String regiterEndPoint = "https://api.stage.advendor.net/api/v2/user/register";
-    String contentTypeAplicationJson = "application/json" ;
-    String body =
-            "{" +
-                    "\"email\":\"o.kulinich+30@codiv.net\",\n" +
-                    "\"role\": 8,\n" +
-                    "\"first_name\":\"aff_rr_test7\",\n" +
-                    "\"last_name\":\"yyy4\",\n" +
-                    "\"description\":\"UA\", \n" +
-                    "\"password\":\"12345678\",\n" +
-                    "\"agree_with_license_agreement\": true\n"
-
-           + "}";
 
 
     @Test
@@ -69,6 +61,23 @@ public class TestAssured extends ParentEndpointTest {
 
         Assert.assertEquals("{\"error\":1,\"message\":\"Field is required\",\"fields\":[\"recaptcha\"]}" ,responseBody);
         Assert.assertEquals(responseBody.contains("recaptcha"), true);
+    }
+
+    @Test
+    public void convertMapToJson() {
+        Map<String, String> elements = new HashMap();
+        elements.put("Key1", "Value1");
+        elements.put("Key2", "Value2");
+        elements.put("Key3", "Value3");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            String json = objectMapper.writeValueAsString(elements);
+            System.out.println(json);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 
 
