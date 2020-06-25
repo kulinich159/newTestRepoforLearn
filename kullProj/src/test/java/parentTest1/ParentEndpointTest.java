@@ -45,19 +45,20 @@ public class ParentEndpointTest {
 //        }};
 //        return getBody2();
 //    }
+
     public TraficSourseCreateEndpoint traficSourseCreateEndpoint;
 
 
-//    public String getBody4() {
-//        return bo ;
-//    }
     @Before
     public void setup() {
 
         traficSourseCreateEndpoint = new TraficSourseCreateEndpoint();
         RestAssured.baseURI = "https://api.stage.advendor.net/api/v2/user";
         RestAssured.port = 443;
+
     }
+
+
 
 
     public void registerAffiliateWithMailThatAlreadyExist111() {
