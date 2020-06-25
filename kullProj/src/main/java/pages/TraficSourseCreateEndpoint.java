@@ -36,17 +36,5 @@ public class TraficSourseCreateEndpoint extends ParentEndpoint {
         return dataWithouAgreeLicense;
     }
 
-    public String body4 =
-
-            "{" +
-                    "\"email\":\"o.kulinich+30@codiv.net\",\n" +
-                    "\"role\": 8,\n" +
-                    "\"first_name\":\"aff_rr_test7\",\n" +
-                    "\"last_name\":\"yyy4\",\n" +
-                    "\"description\":\"UA\", \n" +
-                    "\"password\":\"12345678\",\n" +
-                    "\"agree_with_license_agreement\": true\n"
-
-                    + "}";
 
 }
