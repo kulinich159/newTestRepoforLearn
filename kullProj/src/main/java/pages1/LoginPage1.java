@@ -1,7 +1,6 @@
 package pages1;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +24,7 @@ public class LoginPage1 extends ParentPages1 {
 
         try {
 
-            webDriver.get("https://stage-board.advendor.net/");
+            webDriver.get("https://stage.advendor.net/");
             logger.info("Login page was opened");
 
         }catch (Exception e) {

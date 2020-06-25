@@ -23,7 +23,7 @@ public class AdvLogin {
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        webDriver.get("https://172.20.136.120/#/login");
+        webDriver.get("http://127.0.0.1:8080/recaptcha.html");
 
         webDriver.findElement(By.id("email")).sendKeys("kulinich159+33@gmail.com");
         webDriver.findElement(By.id("password")).sendKeys("WqD:ITX@OuxJ");

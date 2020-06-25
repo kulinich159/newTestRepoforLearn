@@ -24,6 +24,8 @@ public class ParentTest1 {
     protected CreateOfferPage createOfferPage;
     String browser = System.getProperty("browser");
 
+
+
     @Before
     public void setUp(){
 
@@ -33,6 +35,7 @@ public class ParentTest1 {
         loginPage1 = new LoginPage1(webDriver);
         homePage1 = new HomePage1(webDriver);
         createOfferPage = new CreateOfferPage(webDriver);
+
     }
 
     @After
@@ -58,4 +61,6 @@ public class ParentTest1 {
 
         }
     }
+
+
 }
