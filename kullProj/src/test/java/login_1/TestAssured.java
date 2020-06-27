@@ -1,26 +1,36 @@
 package login_1;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.TmsLink;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import parentTest1.ParentEndpointTest;
 
-import java.util.HashMap;
-import java.util.Map;
+//@RunWith(Parameterized.class)
 
 public class TestAssured extends ParentEndpointTest {
 
 
-    Logger logger = Logger.getLogger(getClass());
-
+//@Parameterized.Parameters
+//public static Collection testData () {
+//    return Arrays.asList(new Object[][]{
+//            {"email","asdasasdas@asdasd.ss"},
+//            {"password","aasdasdas"}
+//    });
+//  clean
+//}
 
     @Test
     public void registerAffiliateWithMailThatAlreadyExist (){
+
+//        ExcelDriver excelDriver = new ExcelDriver();
+//        Map dataForvalidTS = excelDriver.getData(configProperties.DATA_FILE(),"validLogin");
+//        dataForvalidTS.get("login").toString();
+//        dataForvalidTS.get("pass").toString();
 
 
         RequestSpecification httpRequest = RestAssured.given()
@@ -38,9 +48,13 @@ public class TestAssured extends ParentEndpointTest {
         Assert.assertEquals(statusCode , 400);
 
         Assert.assertEquals("{\"error\":101,\"message\":\"User with this email already exists\",\"fields\":[\"email\"]}" ,responseBody);
-        Assert.assertEquals(responseBody.contains("101"), true);
+        Assert.assertEquals(responseBody.contains("101"),  true);
     }
 
+
+   // @Issue("ADV-T99")
+    @TmsLink("ADV-T99")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void registerAffiliateWithFalseAgreementLicense (){
 
@@ -61,27 +75,13 @@ public class TestAssured extends ParentEndpointTest {
 
         Assert.assertEquals("{\"error\":1,\"message\":\"Field is required\",\"fields\":[\"recaptcha\"]}" ,responseBody);
         Assert.assertEquals(responseBody.contains("recaptcha"), true);
-    }
-
-    @Test
-    public void convertMapToJson() {
-        Map<String, String> elements = new HashMap();
-        elements.put("Key1", "Value1");
-        elements.put("Key2", "Value2");
-        elements.put("Key3", "Value3");
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        try {
-            String json = objectMapper.writeValueAsString(elements);
-            System.out.println(json);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
+        traficSourseCreateEndpoint.convertMapToJson();
     }
 
 
-//    @Test
+
+
+//
 //    public void registerAffiliateWithMailThatAlreadyExist() {
 //
 //        given().log().body()
@@ -98,7 +98,7 @@ public class TestAssured extends ParentEndpointTest {
 //    }
 
 
-//    @Test
+//
 //    public Response registerNewAffiliate(){
 //
 //        Response response =

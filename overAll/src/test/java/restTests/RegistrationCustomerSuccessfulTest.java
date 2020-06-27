@@ -6,9 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import restSteps.demoqa.ApiDemoQA;
 
-import static libs.Utils.getDateAndTimeFormated;
-
 public class RegistrationCustomerSuccessfulTest {
+
     @Test
     public void registrationSuccessful() {
 //        String dateTime = getDateAndTimeFormated();

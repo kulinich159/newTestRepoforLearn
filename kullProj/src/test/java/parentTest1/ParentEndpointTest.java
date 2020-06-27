@@ -3,6 +3,8 @@ package parentTest1;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import libs.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.Before;
 import pages.TraficSourseCreateEndpoint;
 
@@ -34,18 +36,16 @@ public class ParentEndpointTest {
 //        requestParams1.put("description", "UA");
 //        requestParams1.put("password", "12345678");
 //        requestParams1.put("agree_with_license_agreement", "true");
-//        request.body(requestParams1.toString());
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("FirstName", "Virender");
-//        map.put("LastName", "Singh");
-//        map.put("Address", Arrays.asList(new HashMap<String, Object>() {{
-//            put("Line1", "Flat no 101");
-//            put("Area", "Andheri");
-//            put("City", "Mumbai");
-//        }};
-//        return getBody2();
+//        RequestParams1 requestParams1 = new requestParams1();
+//
+//        try {
+//            String json = requestParams1.writeValueAsString(elements);
+//            System.out.println(json);
+//        } catch (JsonProcessingException e) {
+//            e.printStackTrace();
+//        }
 //    }
-
+    protected static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
     public TraficSourseCreateEndpoint traficSourseCreateEndpoint;
 
 
@@ -73,4 +73,6 @@ public class ParentEndpointTest {
         String responseBody = response.getBody().asString();
 
     }
+
+    
 }
