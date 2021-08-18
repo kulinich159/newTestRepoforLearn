@@ -29,7 +29,7 @@ public class AdvLogin {
         webDriver.findElement(By.id("password")).sendKeys("WqD:ITX@OuxJ");
         webDriver.findElement(By.id("loginButton")).click();
 
-        Assert.assertTrue("Logo is not presentsts",webDriver.findElement(By.xpath(".//*[@src='assets/img/logo2.png']")).isDisplayed());
+        Assert.assertTrue("Logo is not presen423423t",webDriver.findElement(By.xpath(".//*[@src='assets/img/logo2.png']")).isDisplayed());
         webDriver.quit();
 
     }
